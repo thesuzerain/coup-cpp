@@ -90,13 +90,16 @@
 		<Unit filename="/Users/wyattverchere/GITHUB/coup-cpp/action.h">
 			<Option target="coup_cpp"/>
 		</Unit>
+		<Unit filename="/Users/wyattverchere/GITHUB/coup-cpp/action_helper.cpp">
+			<Option target="coup_cpp"/>
+		</Unit>
+		<Unit filename="/Users/wyattverchere/GITHUB/coup-cpp/action_helper.h">
+			<Option target="coup_cpp"/>
+		</Unit>
 		<Unit filename="/Users/wyattverchere/GITHUB/coup-cpp/ai.cpp">
 			<Option target="coup_cpp"/>
 		</Unit>
 		<Unit filename="/Users/wyattverchere/GITHUB/coup-cpp/ai.h">
-			<Option target="coup_cpp"/>
-		</Unit>
-		<Unit filename="/Users/wyattverchere/GITHUB/coup-cpp/card.cpp">
 			<Option target="coup_cpp"/>
 		</Unit>
 		<Unit filename="/Users/wyattverchere/GITHUB/coup-cpp/card.h">
@@ -115,9 +118,6 @@
 			<Option target="coup_cpp"/>
 		</Unit>
 		<Unit filename="/Users/wyattverchere/GITHUB/coup-cpp/main.cpp">
-			<Option target="coup_cpp"/>
-		</Unit>
-		<Unit filename="/Users/wyattverchere/GITHUB/coup-cpp/main.h">
 			<Option target="coup_cpp"/>
 		</Unit>
 		<Unit filename="/Users/wyattverchere/GITHUB/coup-cpp/player.cpp">

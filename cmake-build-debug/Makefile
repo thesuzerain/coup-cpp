@@ -150,6 +150,33 @@ action.cpp.s:
 	$(MAKE) -f CMakeFiles/coup_cpp.dir/build.make CMakeFiles/coup_cpp.dir/action.cpp.s
 .PHONY : action.cpp.s
 
+action_helper.o: action_helper.cpp.o
+
+.PHONY : action_helper.o
+
+# target to build an object file
+action_helper.cpp.o:
+	$(MAKE) -f CMakeFiles/coup_cpp.dir/build.make CMakeFiles/coup_cpp.dir/action_helper.cpp.o
+.PHONY : action_helper.cpp.o
+
+action_helper.i: action_helper.cpp.i
+
+.PHONY : action_helper.i
+
+# target to preprocess a source file
+action_helper.cpp.i:
+	$(MAKE) -f CMakeFiles/coup_cpp.dir/build.make CMakeFiles/coup_cpp.dir/action_helper.cpp.i
+.PHONY : action_helper.cpp.i
+
+action_helper.s: action_helper.cpp.s
+
+.PHONY : action_helper.s
+
+# target to generate assembly for a file
+action_helper.cpp.s:
+	$(MAKE) -f CMakeFiles/coup_cpp.dir/build.make CMakeFiles/coup_cpp.dir/action_helper.cpp.s
+.PHONY : action_helper.cpp.s
+
 ai.o: ai.cpp.o
 
 .PHONY : ai.o
@@ -176,33 +203,6 @@ ai.s: ai.cpp.s
 ai.cpp.s:
 	$(MAKE) -f CMakeFiles/coup_cpp.dir/build.make CMakeFiles/coup_cpp.dir/ai.cpp.s
 .PHONY : ai.cpp.s
-
-card.o: card.cpp.o
-
-.PHONY : card.o
-
-# target to build an object file
-card.cpp.o:
-	$(MAKE) -f CMakeFiles/coup_cpp.dir/build.make CMakeFiles/coup_cpp.dir/card.cpp.o
-.PHONY : card.cpp.o
-
-card.i: card.cpp.i
-
-.PHONY : card.i
-
-# target to preprocess a source file
-card.cpp.i:
-	$(MAKE) -f CMakeFiles/coup_cpp.dir/build.make CMakeFiles/coup_cpp.dir/card.cpp.i
-.PHONY : card.cpp.i
-
-card.s: card.cpp.s
-
-.PHONY : card.s
-
-# target to generate assembly for a file
-card.cpp.s:
-	$(MAKE) -f CMakeFiles/coup_cpp.dir/build.make CMakeFiles/coup_cpp.dir/card.cpp.s
-.PHONY : card.cpp.s
 
 deck.o: deck.cpp.o
 
@@ -351,12 +351,12 @@ help:
 	@echo "... action.o"
 	@echo "... action.i"
 	@echo "... action.s"
+	@echo "... action_helper.o"
+	@echo "... action_helper.i"
+	@echo "... action_helper.s"
 	@echo "... ai.o"
 	@echo "... ai.i"
 	@echo "... ai.s"
-	@echo "... card.o"
-	@echo "... card.i"
-	@echo "... card.s"
 	@echo "... deck.o"
 	@echo "... deck.i"
 	@echo "... deck.s"

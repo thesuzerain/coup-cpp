@@ -4,11 +4,20 @@
 CMakeFiles/coup_cpp.dir/action.cpp.o
  /Users/wyattverchere/GITHUB/coup-cpp/action.cpp
  /Users/wyattverchere/GITHUB/coup-cpp/action.h
+ /Users/wyattverchere/GITHUB/coup-cpp/action_helper.h
  /Users/wyattverchere/GITHUB/coup-cpp/ai.h
  /Users/wyattverchere/GITHUB/coup-cpp/card.h
  /Users/wyattverchere/GITHUB/coup-cpp/deck.h
  /Users/wyattverchere/GITHUB/coup-cpp/game.h
- /Users/wyattverchere/GITHUB/coup-cpp/main.h
+ /Users/wyattverchere/GITHUB/coup-cpp/player.h
+ /Users/wyattverchere/GITHUB/coup-cpp/ui.h
+CMakeFiles/coup_cpp.dir/action_helper.cpp.o
+ /Users/wyattverchere/GITHUB/coup-cpp/action_helper.cpp
+ /Users/wyattverchere/GITHUB/coup-cpp/action_helper.h
+ /Users/wyattverchere/GITHUB/coup-cpp/ai.h
+ /Users/wyattverchere/GITHUB/coup-cpp/card.h
+ /Users/wyattverchere/GITHUB/coup-cpp/deck.h
+ /Users/wyattverchere/GITHUB/coup-cpp/game.h
  /Users/wyattverchere/GITHUB/coup-cpp/player.h
  /Users/wyattverchere/GITHUB/coup-cpp/ui.h
 CMakeFiles/coup_cpp.dir/ai.cpp.o
@@ -18,9 +27,6 @@ CMakeFiles/coup_cpp.dir/ai.cpp.o
  /Users/wyattverchere/GITHUB/coup-cpp/deck.h
  /Users/wyattverchere/GITHUB/coup-cpp/game.h
  /Users/wyattverchere/GITHUB/coup-cpp/player.h
-CMakeFiles/coup_cpp.dir/card.cpp.o
- /Users/wyattverchere/GITHUB/coup-cpp/card.cpp
- /Users/wyattverchere/GITHUB/coup-cpp/card.h
 CMakeFiles/coup_cpp.dir/deck.cpp.o
  /Users/wyattverchere/GITHUB/coup-cpp/card.h
  /Users/wyattverchere/GITHUB/coup-cpp/deck.cpp
@@ -36,15 +42,15 @@ CMakeFiles/coup_cpp.dir/main.cpp.o
  /Users/wyattverchere/GITHUB/coup-cpp/deck.h
  /Users/wyattverchere/GITHUB/coup-cpp/game.h
  /Users/wyattverchere/GITHUB/coup-cpp/main.cpp
- /Users/wyattverchere/GITHUB/coup-cpp/main.h
  /Users/wyattverchere/GITHUB/coup-cpp/player.h
  /Users/wyattverchere/GITHUB/coup-cpp/ui.h
 CMakeFiles/coup_cpp.dir/player.cpp.o
  /Users/wyattverchere/GITHUB/coup-cpp/action.h
+ /Users/wyattverchere/GITHUB/coup-cpp/action_helper.h
+ /Users/wyattverchere/GITHUB/coup-cpp/ai.h
  /Users/wyattverchere/GITHUB/coup-cpp/card.h
  /Users/wyattverchere/GITHUB/coup-cpp/deck.h
  /Users/wyattverchere/GITHUB/coup-cpp/game.h
- /Users/wyattverchere/GITHUB/coup-cpp/main.h
  /Users/wyattverchere/GITHUB/coup-cpp/player.cpp
  /Users/wyattverchere/GITHUB/coup-cpp/player.h
  /Users/wyattverchere/GITHUB/coup-cpp/ui.h
@@ -52,7 +58,6 @@ CMakeFiles/coup_cpp.dir/ui.cpp.o
  /Users/wyattverchere/GITHUB/coup-cpp/card.h
  /Users/wyattverchere/GITHUB/coup-cpp/deck.h
  /Users/wyattverchere/GITHUB/coup-cpp/game.h
- /Users/wyattverchere/GITHUB/coup-cpp/main.h
  /Users/wyattverchere/GITHUB/coup-cpp/player.h
  /Users/wyattverchere/GITHUB/coup-cpp/ui.cpp
  /Users/wyattverchere/GITHUB/coup-cpp/ui.h

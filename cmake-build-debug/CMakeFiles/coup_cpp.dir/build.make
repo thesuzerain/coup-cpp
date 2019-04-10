@@ -135,18 +135,18 @@ CMakeFiles/coup_cpp.dir/action.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/coup_cpp.dir/action.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/wyattverchere/GITHUB/coup-cpp/action.cpp -o CMakeFiles/coup_cpp.dir/action.cpp.s
 
-CMakeFiles/coup_cpp.dir/card.cpp.o: CMakeFiles/coup_cpp.dir/flags.make
-CMakeFiles/coup_cpp.dir/card.cpp.o: ../card.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wyattverchere/GITHUB/coup-cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/coup_cpp.dir/card.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/coup_cpp.dir/card.cpp.o -c /Users/wyattverchere/GITHUB/coup-cpp/card.cpp
+CMakeFiles/coup_cpp.dir/action_helper.cpp.o: CMakeFiles/coup_cpp.dir/flags.make
+CMakeFiles/coup_cpp.dir/action_helper.cpp.o: ../action_helper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wyattverchere/GITHUB/coup-cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/coup_cpp.dir/action_helper.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/coup_cpp.dir/action_helper.cpp.o -c /Users/wyattverchere/GITHUB/coup-cpp/action_helper.cpp
 
-CMakeFiles/coup_cpp.dir/card.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/coup_cpp.dir/card.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/wyattverchere/GITHUB/coup-cpp/card.cpp > CMakeFiles/coup_cpp.dir/card.cpp.i
+CMakeFiles/coup_cpp.dir/action_helper.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/coup_cpp.dir/action_helper.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/wyattverchere/GITHUB/coup-cpp/action_helper.cpp > CMakeFiles/coup_cpp.dir/action_helper.cpp.i
 
-CMakeFiles/coup_cpp.dir/card.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/coup_cpp.dir/card.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/wyattverchere/GITHUB/coup-cpp/card.cpp -o CMakeFiles/coup_cpp.dir/card.cpp.s
+CMakeFiles/coup_cpp.dir/action_helper.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/coup_cpp.dir/action_helper.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/wyattverchere/GITHUB/coup-cpp/action_helper.cpp -o CMakeFiles/coup_cpp.dir/action_helper.cpp.s
 
 CMakeFiles/coup_cpp.dir/ai.cpp.o: CMakeFiles/coup_cpp.dir/flags.make
 CMakeFiles/coup_cpp.dir/ai.cpp.o: ../ai.cpp
@@ -169,7 +169,7 @@ coup_cpp_OBJECTS = \
 "CMakeFiles/coup_cpp.dir/game.cpp.o" \
 "CMakeFiles/coup_cpp.dir/deck.cpp.o" \
 "CMakeFiles/coup_cpp.dir/action.cpp.o" \
-"CMakeFiles/coup_cpp.dir/card.cpp.o" \
+"CMakeFiles/coup_cpp.dir/action_helper.cpp.o" \
 "CMakeFiles/coup_cpp.dir/ai.cpp.o"
 
 # External object files for target coup_cpp
@@ -181,7 +181,7 @@ coup_cpp: CMakeFiles/coup_cpp.dir/ui.cpp.o
 coup_cpp: CMakeFiles/coup_cpp.dir/game.cpp.o
 coup_cpp: CMakeFiles/coup_cpp.dir/deck.cpp.o
 coup_cpp: CMakeFiles/coup_cpp.dir/action.cpp.o
-coup_cpp: CMakeFiles/coup_cpp.dir/card.cpp.o
+coup_cpp: CMakeFiles/coup_cpp.dir/action_helper.cpp.o
 coup_cpp: CMakeFiles/coup_cpp.dir/ai.cpp.o
 coup_cpp: CMakeFiles/coup_cpp.dir/build.make
 coup_cpp: CMakeFiles/coup_cpp.dir/link.txt

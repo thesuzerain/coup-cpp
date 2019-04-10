@@ -19,16 +19,34 @@ random
 -
 iostream
 -
+sstream
+-
 algorithm
 -
 
 /Users/wyattverchere/GITHUB/coup-cpp/action.h
-sstream
--
 player.h
 /Users/wyattverchere/GITHUB/coup-cpp/player.h
 ui.h
 /Users/wyattverchere/GITHUB/coup-cpp/ui.h
+action_helper.h
+/Users/wyattverchere/GITHUB/coup-cpp/action_helper.h
+
+/Users/wyattverchere/GITHUB/coup-cpp/action_helper.cpp
+action_helper.h
+/Users/wyattverchere/GITHUB/coup-cpp/action_helper.h
+string
+-
+sstream
+-
+
+/Users/wyattverchere/GITHUB/coup-cpp/action_helper.h
+game.h
+/Users/wyattverchere/GITHUB/coup-cpp/game.h
+ui.h
+/Users/wyattverchere/GITHUB/coup-cpp/ui.h
+ai.h
+/Users/wyattverchere/GITHUB/coup-cpp/ai.h
 
 /Users/wyattverchere/GITHUB/coup-cpp/ai.h
 vector
@@ -39,8 +57,6 @@ card.h
 /Users/wyattverchere/GITHUB/coup-cpp/card.h
 
 /Users/wyattverchere/GITHUB/coup-cpp/card.h
-string
--
 
 /Users/wyattverchere/GITHUB/coup-cpp/deck.h
 card.h
@@ -54,7 +70,29 @@ player.h
 deck.h
 /Users/wyattverchere/GITHUB/coup-cpp/deck.h
 
-/Users/wyattverchere/GITHUB/coup-cpp/main.h
+/Users/wyattverchere/GITHUB/coup-cpp/main.cpp
+player.h
+/Users/wyattverchere/GITHUB/coup-cpp/player.h
+ui.h
+/Users/wyattverchere/GITHUB/coup-cpp/ui.h
+game.h
+/Users/wyattverchere/GITHUB/coup-cpp/game.h
+iostream
+-
+
+/Users/wyattverchere/GITHUB/coup-cpp/player.cpp
+player.h
+/Users/wyattverchere/GITHUB/coup-cpp/player.h
+ui.h
+/Users/wyattverchere/GITHUB/coup-cpp/ui.h
+action.h
+/Users/wyattverchere/GITHUB/coup-cpp/action.h
+ai.h
+/Users/wyattverchere/GITHUB/coup-cpp/ai.h
+random
+-
+sstream
+-
 
 /Users/wyattverchere/GITHUB/coup-cpp/player.h
 string
@@ -64,13 +102,17 @@ game.h
 card.h
 /Users/wyattverchere/GITHUB/coup-cpp/card.h
 
+/Users/wyattverchere/GITHUB/coup-cpp/ui.cpp
+ui.h
+/Users/wyattverchere/GITHUB/coup-cpp/ui.h
+sstream
+-
+
 /Users/wyattverchere/GITHUB/coup-cpp/ui.h
 iostream
 -
 vector
 -
-main.h
-/Users/wyattverchere/GITHUB/coup-cpp/main.h
 player.h
 /Users/wyattverchere/GITHUB/coup-cpp/player.h
 card.h

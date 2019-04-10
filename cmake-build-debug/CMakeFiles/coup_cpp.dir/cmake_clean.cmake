@@ -5,7 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/coup_cpp.dir/game.cpp.o"
   "CMakeFiles/coup_cpp.dir/deck.cpp.o"
   "CMakeFiles/coup_cpp.dir/action.cpp.o"
-  "CMakeFiles/coup_cpp.dir/card.cpp.o"
+  "CMakeFiles/coup_cpp.dir/action_helper.cpp.o"
   "CMakeFiles/coup_cpp.dir/ai.cpp.o"
   "coup_cpp.pdb"
   "coup_cpp"

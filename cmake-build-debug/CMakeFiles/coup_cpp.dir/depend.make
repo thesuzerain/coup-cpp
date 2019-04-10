@@ -3,13 +3,22 @@
 
 CMakeFiles/coup_cpp.dir/action.cpp.o: ../action.cpp
 CMakeFiles/coup_cpp.dir/action.cpp.o: ../action.h
+CMakeFiles/coup_cpp.dir/action.cpp.o: ../action_helper.h
 CMakeFiles/coup_cpp.dir/action.cpp.o: ../ai.h
 CMakeFiles/coup_cpp.dir/action.cpp.o: ../card.h
 CMakeFiles/coup_cpp.dir/action.cpp.o: ../deck.h
 CMakeFiles/coup_cpp.dir/action.cpp.o: ../game.h
-CMakeFiles/coup_cpp.dir/action.cpp.o: ../main.h
 CMakeFiles/coup_cpp.dir/action.cpp.o: ../player.h
 CMakeFiles/coup_cpp.dir/action.cpp.o: ../ui.h
+
+CMakeFiles/coup_cpp.dir/action_helper.cpp.o: ../action_helper.cpp
+CMakeFiles/coup_cpp.dir/action_helper.cpp.o: ../action_helper.h
+CMakeFiles/coup_cpp.dir/action_helper.cpp.o: ../ai.h
+CMakeFiles/coup_cpp.dir/action_helper.cpp.o: ../card.h
+CMakeFiles/coup_cpp.dir/action_helper.cpp.o: ../deck.h
+CMakeFiles/coup_cpp.dir/action_helper.cpp.o: ../game.h
+CMakeFiles/coup_cpp.dir/action_helper.cpp.o: ../player.h
+CMakeFiles/coup_cpp.dir/action_helper.cpp.o: ../ui.h
 
 CMakeFiles/coup_cpp.dir/ai.cpp.o: ../ai.cpp
 CMakeFiles/coup_cpp.dir/ai.cpp.o: ../ai.h
@@ -17,9 +26,6 @@ CMakeFiles/coup_cpp.dir/ai.cpp.o: ../card.h
 CMakeFiles/coup_cpp.dir/ai.cpp.o: ../deck.h
 CMakeFiles/coup_cpp.dir/ai.cpp.o: ../game.h
 CMakeFiles/coup_cpp.dir/ai.cpp.o: ../player.h
-
-CMakeFiles/coup_cpp.dir/card.cpp.o: ../card.cpp
-CMakeFiles/coup_cpp.dir/card.cpp.o: ../card.h
 
 CMakeFiles/coup_cpp.dir/deck.cpp.o: ../card.h
 CMakeFiles/coup_cpp.dir/deck.cpp.o: ../deck.cpp
@@ -35,15 +41,15 @@ CMakeFiles/coup_cpp.dir/main.cpp.o: ../card.h
 CMakeFiles/coup_cpp.dir/main.cpp.o: ../deck.h
 CMakeFiles/coup_cpp.dir/main.cpp.o: ../game.h
 CMakeFiles/coup_cpp.dir/main.cpp.o: ../main.cpp
-CMakeFiles/coup_cpp.dir/main.cpp.o: ../main.h
 CMakeFiles/coup_cpp.dir/main.cpp.o: ../player.h
 CMakeFiles/coup_cpp.dir/main.cpp.o: ../ui.h
 
 CMakeFiles/coup_cpp.dir/player.cpp.o: ../action.h
+CMakeFiles/coup_cpp.dir/player.cpp.o: ../action_helper.h
+CMakeFiles/coup_cpp.dir/player.cpp.o: ../ai.h
 CMakeFiles/coup_cpp.dir/player.cpp.o: ../card.h
 CMakeFiles/coup_cpp.dir/player.cpp.o: ../deck.h
 CMakeFiles/coup_cpp.dir/player.cpp.o: ../game.h
-CMakeFiles/coup_cpp.dir/player.cpp.o: ../main.h
 CMakeFiles/coup_cpp.dir/player.cpp.o: ../player.cpp
 CMakeFiles/coup_cpp.dir/player.cpp.o: ../player.h
 CMakeFiles/coup_cpp.dir/player.cpp.o: ../ui.h
@@ -51,7 +57,6 @@ CMakeFiles/coup_cpp.dir/player.cpp.o: ../ui.h
 CMakeFiles/coup_cpp.dir/ui.cpp.o: ../card.h
 CMakeFiles/coup_cpp.dir/ui.cpp.o: ../deck.h
 CMakeFiles/coup_cpp.dir/ui.cpp.o: ../game.h
-CMakeFiles/coup_cpp.dir/ui.cpp.o: ../main.h
 CMakeFiles/coup_cpp.dir/ui.cpp.o: ../player.h
 CMakeFiles/coup_cpp.dir/ui.cpp.o: ../ui.cpp
 CMakeFiles/coup_cpp.dir/ui.cpp.o: ../ui.h
