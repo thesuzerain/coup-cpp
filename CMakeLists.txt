@@ -6,19 +6,19 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(.)
 
 add_executable(coup_cpp
+        action.cpp
+        action.h
+        action_helper.cpp
+        action_helper.h
+        ai.cpp
+        ai.h
+        card.h
+        deck.cpp
+        deck.h
+        game.cpp
+        game.h
         main.cpp
-        main.h
         player.cpp
         player.h
         ui.cpp
-        ui.h
-        game.cpp
-        game.h
-        deck.cpp
-        deck.h
-        action.cpp
-        action.h
-        card.cpp
-        card.h
-        ai.cpp
-        ai.h)
+        ui.h)

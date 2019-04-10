@@ -2,7 +2,6 @@
 // Created by Wyatt Verchere on 2019-04-08.
 //
 
-#include "main.h"
 #include "player.h"
 #include "ui.h"
 #include "game.h"
@@ -13,19 +12,8 @@
 
 int main(){
 
-
     std::cout << "Welcome to Coup!" << std::endl;
-
-
-    PrintNewFrame("hi");
-
-    std::cout << Colorize("blue text",Color::BLUE) << std::endl;
-
-    Game * thisGame = new Game(4);
-
-    while(true){
-        thisGame->RunTurn(0);
-    }
+    Game * thisGame = new Game(4); // We can change this number to change the number of players
 
 }
 

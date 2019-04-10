@@ -11,6 +11,8 @@
 
 
 Deck::Deck(){
+
+    // Deck is initialized to have 3 of every card
     cardsLeft =  new int[Card::numberOfCards];
     for (int i = 0; i < Card::numberOfCards; i++){
         cardsLeft[i] = 3;
@@ -25,6 +27,7 @@ Card Deck::Draw(){
     srand(time(NULL));
     int randVal = rand() % CardCount();
 
+    // Iterate through types of cards until we arrive at randomly selected one, draw it.
     for(int i = 0; i < Card::numberOfCards; i++){
         if(randVal < cardsLeft[i]){
             cardsLeft[i] --;
@@ -35,7 +38,7 @@ Card Deck::Draw(){
     }
 
     // Should not be able to get here.
-    // TODO: throw error
+    // Just in case, return some card.
     return static_cast<Card>(0);
 }
 

@@ -19,9 +19,9 @@ std::string CardToString(Card card){
         case duke: return Colorize("Duke",Color::MAGENTA);
         case captain: return Colorize("Captain",Color::BLUE);
         case ambassador: return Colorize("Ambassador",Color::GREEN);
-        case assassin: return "Assassin";
+        case assassin: return Colorize("Assassin",Color::RESET);
         case contessa: return Colorize("Contessa",Color::RED);
-        default: return "XXXXXX";
+        default: return Colorize("??????",Color::RESET);
 
     }
 }

@@ -11,8 +11,8 @@ class Deck {
 
 private:
     int * cardsLeft;
-
     int CardCount();
+
 public:
     Deck();
     Card Draw();

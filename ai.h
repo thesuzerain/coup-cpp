@@ -10,14 +10,15 @@
 #include "player.h"
 #include "card.h"
 
-int GetRandomChoice(int rand, int max);
+int GetTarget(int rand, Game * game, int thisId);
 
 Card GetBlockChoice(int rand, Player * player, std::vector<Card> cards);
+
 int GetChallengeChoice(int rand);
 
+int PickAction(int rand, Game * game,Player * player);
 
-class AI {
-};
+int GetReplaceCard(int rand, std::vector<Card>);
 
 
 #endif //COUP_CPP_AI_H

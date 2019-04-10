@@ -5,17 +5,19 @@
 #include "player.h"
 #include "ui.h"
 #include "action.h"
+#include "ai.h"
 
+#include <random>
 #include <sstream>
 
 
-Player::Player(Card card1, Card card2, std::string name){
 
+// Initializes a player to $2, 2 cards
+Player::Player(Card card1, Card card2, std::string name){
+    srand(time(NULL));
     cardsLeft = 2;
     cards = {card1,card2};
-
-    money = 9;
-
+    money = 2;
     playerName = name;
 
 }
@@ -23,30 +25,21 @@ Player::Player(Card card1, Card card2, std::string name){
 
 
 
-// We print out information about each player.
-
+// We create a display string that prints out info about ALL players.
 std::string GetPlayersInfoString(Game * game, bool attacking){
     std::stringstream ss;
     for(int i = 0; i < game->playerCount; i++){
 
-        // If we are choosing to attack a player, we give them reference numbers
+        // If we are using this to choose a player to attack, we give them reference numbers
         if(attacking) ss << "("<<i<<") ";
 
         // Each player's name and their current monetary worth
         ss << game->players[i]->playerName << ":\t\t$" << game->players[i]->money;
 
 
-
-        //TODO: remove debug
-        // We only reveal the cards owned by a player if it is owned by the true player (us) or
-        // owned by an opponent who has revealed it/lost a card.
-
-
-        /*
         // We reveal their first card only if the player is out of the game, or it is owned by the player
         if(i == 0 || game->players[i]->cardsLeft < 1){
             ss << "\t\t"<<CardToString(game->players[i]->cards[0]);
-            if (game->players[i]->cardsLeft < 1) ss << "(revealed)";
         } else {
             ss << "\t\t"<<"??????";
         }
@@ -59,7 +52,6 @@ std::string GetPlayersInfoString(Game * game, bool attacking){
         } else {
             if(i == 0 || game->players[i]->cardsLeft < 2){
                 ss << "\t\t"<<CardToString(game->players[i]->cards[1]);
-                if (game->players[i]->cardsLeft < 1) ss << "(revealed)";
 
             } else {
                 ss << "\t\t"<<"??????";
@@ -67,10 +59,10 @@ std::string GetPlayersInfoString(Game * game, bool attacking){
 
         }
 
+        // To make it easier and understandable, we also write down how many cards they have left
+        ss << "\t\t Cards:" << game->players[i]->cardsLeft;
+
         ss << "\n";
-*/
-        ss << "\t\t"<<CardToString(game->players[i]->cards[0]);
-        ss << "\t\t"<<CardToString(game->players[i]->cards[1])<<"\n";
 
 
     }
@@ -101,7 +93,7 @@ void Player::RunPlayerMain(Game * game, bool lastCommandInvalid) {
 
     if(money >= 10){
         // If the player has more than $10, they MUST do a coup
-        ss << "(0) Coup (-$7)";
+        ss << "(6) Coup (-$7)";
 
     } else {
         ss << "(0) Income (+$1)\t\t\t(1) Foreign Aid (+$2)\n";
@@ -164,5 +156,19 @@ void Player::RunPlayerMain(Game * game, bool lastCommandInvalid) {
 // The main part of each's opponent's turn.
 // ie: what action they are going to choose.
 
-void Player::RunOpponentMain() {}
+void Player::RunOpponentMain(Game * game) {
+
+    // We select a target just in case we will need one
+    int target = GetTarget(rand(),game,myId);
+
+    // If we have at least $10, we must coup
+    if(money >= 10){
+        DoAction(game,myId, ActionType::coup,target);
+
+    } else {
+        int action = PickAction(rand(),game,this);
+        DoAction(game,myId, static_cast<ActionType >(action),target);
+    }
+
+}
 

@@ -19,6 +19,7 @@ std::string GetPlayersInfoString(Game * game, bool attacking);
 class Player {
 
 
+
 public:
     int cardsLeft;
 
@@ -27,13 +28,14 @@ public:
     std::vector<Card> cards;
 
     int money;
+    int myId;
 
     std::string playerName;
 
     Player(Card card1, Card card2, std::string name);
 
     void RunPlayerMain(Game * game, bool lastCommandInvalid);
-    void RunOpponentMain();
+    void RunOpponentMain(Game * game);
     bool HasCard(Card card);
 
 

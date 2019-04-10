@@ -7,7 +7,6 @@
 
 #include <iostream>
 #include <vector>
-#include "main.h"
 #include "player.h"
 #include "card.h"
 
@@ -33,9 +32,5 @@ bool GetPlayerYesNoChoice(std::string text, bool lastCommandInvalid);
 int GetPlayerVariableChoice(std::string text, std::vector<std::string> options, bool lastCommandInvalid);
 bool GetPlayerConfirmation(std::string text);
 
-class ui {
-
-
-};
 
 #endif //COUP_CPP_UI_H
