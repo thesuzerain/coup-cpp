@@ -12,7 +12,7 @@
 
 bool DoChallenge(Game * game, int challengerId, int challengedId, Card challengeCard);
 bool CheckChallenge(Game * game, int playerId, Card card, std::string text);
-Card CheckBlock(Game * game, int target, ActionType actionType, std::string text, std::vector<Card> blockCard);
+Card CheckBlock(Game * game, int target, ActionType actionType, std::string text, const std::vector<Card> & blockCard);
 
 void loseInfluence(Game * game, int playerId);
 

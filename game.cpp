@@ -54,6 +54,10 @@ Game::Game(int playerCount){
 
     }
 
+    delete deck;
+    for(int i = 0; i < playerCount; i++){
+        delete(players[i]);
+    }
 
 }
 

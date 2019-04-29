@@ -21,6 +21,7 @@ std::string CardToString(Card card){
         case ambassador: return Colorize("Ambassador",Color::GREEN);
         case assassin: return Colorize("Assassin",Color::RESET);
         case contessa: return Colorize("Contessa",Color::RED);
+        case nullCard: return Colorize("Do not block.",Color::RESET); // The pseudo-card "nullCard" is used for block handling to symbolize the player choosing to not block.
         default: return Colorize("??????",Color::RESET);
 
     }
@@ -140,7 +141,7 @@ bool GetPlayerYesNoChoice(std::string text, bool lastCommandInvalid){
 
 
 // Returns the index of the string selected from the "opts" list
-int GetPlayerVariableChoice(std::string text, std::vector<std::string> opts, bool lastCommandInvalid){
+int GetPlayerVariableChoice(std::string text, const std::vector<std::string> & opts, bool lastCommandInvalid){
 
     // We print out the available options in a frame for the player to see
     std::stringstream ss;

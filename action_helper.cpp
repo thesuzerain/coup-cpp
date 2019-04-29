@@ -126,7 +126,7 @@ bool CheckChallenge(Game * game, int playerId, Card card, std::string text){
 
 // Called when the player or an opponent is allowed to perform a block
 // Returns the card they choose to block with, or Card::nullCard if they do not block (ie: nullCard is null)
-Card CheckBlock(Game * game, int target, ActionType actionType, std::string text, std::vector<Card> blockCards){
+Card CheckBlock(Game * game, int target, ActionType actionType, std::string text, const std::vector<Card> & blockCards){
 
     std::stringstream ss;
     ss << text << "\n" << GetPlayersInfoString(game,false);
@@ -137,10 +137,6 @@ Card CheckBlock(Game * game, int target, ActionType actionType, std::string text
         std::vector<std::string> blockCardNames;
         std::transform(blockCards.begin(),blockCards.end(),
                        std::back_inserter(blockCardNames),CardToString);
-
-        // We add "nullCard" as a returnable card to signify that no card is being used to block
-        blockCards.push_back(Card::nullCard);
-        blockCardNames.push_back("Do not block.");
 
         return blockCards[GetPlayerVariableChoice(text,blockCardNames,false)];
     } else {

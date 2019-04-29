@@ -12,13 +12,13 @@
 
 int GetTarget(int rand, Game * game, int thisId);
 
-Card GetBlockChoice(int rand, Player * player, std::vector<Card> cards);
+Card GetBlockChoice(int rand, Player * player, const std::vector<Card> & cards);
 
 int GetChallengeChoice(int rand);
 
 int PickAction(int rand, Game * game,Player * player);
 
-int GetReplaceCard(int rand, std::vector<Card>);
+int GetReplaceCard(int rand, const std::vector<Card> &);
 
 
 #endif //COUP_CPP_AI_H

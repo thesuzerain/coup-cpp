@@ -22,7 +22,7 @@ int GetTarget(int rand, Game * game, int thisId){
 }
 
 
-Card GetBlockChoice(int rand, Player * player, std::vector<Card> cards){
+Card GetBlockChoice(int rand, Player * player, const std::vector<Card> & cards){
 
     //If they have the card, they will always block with it
     for(int i = 0; i < cards.size(); i++){
@@ -103,6 +103,6 @@ int PickAction(int rand, Game * game,Player * player){
 }
 
 
-int GetReplaceCard(int rand, std::vector<Card> cards){
+int GetReplaceCard(int rand, const std::vector<Card>& cards){
     return rand % cards.size();
 }

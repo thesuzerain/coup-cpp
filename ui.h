@@ -29,7 +29,7 @@ std::string Colorize(std::string text, Color color);
 ActionType GetPlayerActionChoice();
 int GetPlayerTargetChoice(Game * game, bool lastCommandInvalid);
 bool GetPlayerYesNoChoice(std::string text, bool lastCommandInvalid);
-int GetPlayerVariableChoice(std::string text, std::vector<std::string> options, bool lastCommandInvalid);
+int GetPlayerVariableChoice(std::string text, const std::vector<std::string> & options, bool lastCommandInvalid);
 bool GetPlayerConfirmation(std::string text);
 
 

@@ -13,7 +13,6 @@
 Deck::Deck(){
 
     // Deck is initialized to have 3 of every card
-    cardsLeft =  new int[Card::numberOfCards];
     for (int i = 0; i < Card::numberOfCards; i++){
         cardsLeft[i] = 3;
     }

@@ -13,7 +13,7 @@
 int main(){
 
     std::cout << "Welcome to Coup!" << std::endl;
-    Game * thisGame = new Game(4); // We can change this number to change the number of players
-
+    Game thisGame = Game(4); // We can change this number to change the number of players
+    
 }
 

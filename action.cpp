@@ -106,7 +106,7 @@ void HandleAssassinate(Game * game, int playerId, ActionType actionType, int tar
         //We check if target wants to block with a Contessa.
         // If they do, we go into the challenge for Contessa
         // If not, we finish assassination
-        if(CheckBlock( game, targetId, actionType, ss.str(), {Card::contessa}) == Card::contessa){
+        if(CheckBlock( game, targetId, actionType, ss.str(), {Card::contessa, Card::nullCard}) == Card::contessa){
 
             ss.str(std::string());
             ss << game->players[targetId]->playerName << " is blocking with a Contessa.\n";
@@ -228,7 +228,7 @@ void HandleSteal(Game * game, int playerId, ActionType actionType, int targetId)
         //We check if target wants to block with a Captain/Ambassador.
         // If they do, we go into the challenge for Captain/Ambassador
         // If not, we finish assassination
-        Card blockedCard = CheckBlock( game, targetId, actionType, ss.str(), {Card::ambassador,Card::captain});
+        Card blockedCard = CheckBlock( game, targetId, actionType, ss.str(), {Card::ambassador,Card::captain, Card::nullCard});
         if(blockedCard == Card::ambassador || blockedCard == Card::captain){
 
             ss.str(std::string());
@@ -304,7 +304,7 @@ void HandleForeignAid(Game * game, int playerId, ActionType actionType, int targ
         //A player cannot block themselves
         if(i == playerId) continue;
 
-        if(CheckBlock( game, i, actionType, ss.str(), {Card::duke}) == Card::duke){
+        if(CheckBlock( game, i, actionType, ss.str(), {Card::duke, Card::nullCard}) == Card::duke){
 
             ss.str(std::string());
             ss << game->players[i]->playerName << " is blocking with a Duke.\n";

@@ -10,7 +10,7 @@
 class Deck {
 
 private:
-    int * cardsLeft;
+    int cardsLeft[Card::numberOfCards];
     int CardCount();
 
 public:
