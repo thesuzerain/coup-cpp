@@ -8,8 +8,6 @@ include_directories(.)
 add_executable(coup_cpp
         action.cpp
         action.h
-        action_helper.cpp
-        action_helper.h
         ai.cpp
         ai.h
         card.h
@@ -21,4 +19,4 @@ add_executable(coup_cpp
         player.cpp
         player.h
         ui.cpp
-        ui.h)
+        ui.h  "actiontype.h")

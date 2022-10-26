@@ -6,28 +6,28 @@
 
 # include <sstream>
 
-
-bool WINDOWS = false;
 #ifdef _WIN32
-WINDOWS = true;
+bool WINDOWS = true;
+#else
+bool WINDOWS = false;
 #endif
 
 
 // Prints out the card name in its designated color
 std::string CardToString(Card card){
     switch (card){
-        case duke: return Colorize("Duke",Color::MAGENTA);
-        case captain: return Colorize("Captain",Color::BLUE);
-        case ambassador: return Colorize("Ambassador",Color::GREEN);
-        case assassin: return Colorize("Assassin",Color::RESET);
-        case contessa: return Colorize("Contessa",Color::RED);
-        case nullCard: return Colorize("Do not block.",Color::RESET); // The pseudo-card "nullCard" is used for block handling to symbolize the player choosing to not block.
-        default: return Colorize("??????",Color::RESET);
+        case duke: return ColorizeText("Duke",Color::MAGENTA);
+        case captain: return ColorizeText("Captain",Color::BLUE);
+        case ambassador: return ColorizeText("Ambassador",Color::GREEN);
+        case assassin: return ColorizeText("Assassin",Color::RESET);
+        case contessa: return ColorizeText("Contessa",Color::RED);
+        case nullCard: return ColorizeText("(None)", Color::RESET); // The pseudo-card "nullCard" is used for block handling to symbolize the player choosing to not block.
+        default: return ColorizeText("??????",Color::RESET);
 
     }
 }
 
-void PrintNewFrame(std::string text){
+void PrintNewFrame(const std::string & text){
 
     // Creates a new frame in the UI.
 
@@ -45,7 +45,7 @@ void PrintNewFrame(std::string text){
 
 }
 
-std::string Colorize(std::string text, Color color) {
+std::string ColorizeText(const std::string & text, Color color) {
 
     // If the user is on a linux-based terminal that accepts these escape characters (I don't think win32 does),
     // colorizes the text with the given color.
@@ -60,7 +60,6 @@ std::string Colorize(std::string text, Color color) {
     return text;
 }
 
-//TODO
 ActionType GetPlayerActionChoice(){
     std::string input;
     getline(std::cin,input);
@@ -86,19 +85,22 @@ ActionType GetPlayerActionChoice(){
 
         }
     }
-
+    return ActionType::bad_action;
 
 }
 
 // This function is used for actions such as Steal, Coup, and Assassinate
 // A target is selected by the player
 // It cannot be themselves and it must be a player in the game
-int GetPlayerTargetChoice(Game * game, bool lastCommandInvalid){
+int GetPlayerTargetChoice(const Game & game, bool lastCommandInvalid){
 
     // We print out the available options in a frame for the player to see
     std::stringstream ss;
-    ss << GetPlayersInfoString(game,true);
+    for (int i = 1; i < game.playerCount; i++) {
+        ss << "(" << i << ") " << game.players[i]->GetPlayerInfoString(true);
+    }
     ss << "\n";
+    
     if(lastCommandInvalid){
         ss << "Invalid attacking target.\n";
     } else {
@@ -119,7 +121,7 @@ int GetPlayerTargetChoice(Game * game, bool lastCommandInvalid){
 
             //Should only be an integer that is NOT 0 (the player using the attack) and is a legal player
             int action = std::stoi(input);
-            if(action == 0 || action >= game->playerCount){
+            if(action == 0 || action >= game.playerCount || game.players[action]->cardsLeft <= 0) {
                 return GetPlayerTargetChoice(game, true);
             } else {
                 return action;
@@ -134,14 +136,14 @@ int GetPlayerTargetChoice(Game * game, bool lastCommandInvalid){
 
 }
 
-bool GetPlayerYesNoChoice(std::string text, bool lastCommandInvalid){
+bool GetPlayerYesNoChoice(const std::string & text, bool lastCommandInvalid){
     std::vector<std::string> opts = {"Yes","No"};
     return GetPlayerVariableChoice( text, opts,  lastCommandInvalid) == 0;
 }
 
 
 // Returns the index of the string selected from the "opts" list
-int GetPlayerVariableChoice(std::string text, const std::vector<std::string> & opts, bool lastCommandInvalid){
+int GetPlayerVariableChoice(const std::string & text, const std::vector<std::string> & opts, bool lastCommandInvalid){
 
     // We print out the available options in a frame for the player to see
     std::stringstream ss;
@@ -196,8 +198,7 @@ int GetPlayerVariableChoice(std::string text, const std::vector<std::string> & o
 
 // Displays text in its own screen to the user (used for an alert message, essentially).
 // No interaction is required so we do not care what the user input is.
-
-bool GetPlayerConfirmation(std::string text){
+bool GetPlayerConfirmation(const std::string & text){
     // We print out desired text in a frame.
     std::stringstream ss;
     ss << text << "\n";

@@ -7,49 +7,36 @@
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
 
-
-
-
 Deck::Deck(){
-
     // Deck is initialized to have 3 of every card
     for (int i = 0; i < Card::numberOfCards; i++){
-        cardsLeft[i] = 3;
+        cards.push_back(static_cast<Card>(i));
     }
 }
 
-
-// Draws a random card from the deck by selecting one randomly
-// Subtracts it from the cards stored in the deck and returns it
 Card Deck::Draw(){
+    // Return null if empty deck
+    if (CardCount() <= 0) {
+        return Card::nullCard;
+    }
 
     srand(time(NULL));
     int randVal = rand() % CardCount();
 
-    // Iterate through types of cards until we arrive at randomly selected one, draw it.
-    for(int i = 0; i < Card::numberOfCards; i++){
-        if(randVal < cardsLeft[i]){
-            cardsLeft[i] --;
-            return static_cast<Card>(i);
-        } else {
-            randVal -= cardsLeft[i];
-        }
-    }
-
-    // Should not be able to get here.
-    // Just in case, return some card.
-    return static_cast<Card>(0);
+    Card card = cards[randVal];
+    cards.erase(cards.begin()+randVal);
+    return card;
 }
 
 void Deck::Replace(Card card){
-    cardsLeft[card] ++;
+    cards.push_back(card);
 }
 
-
 int Deck::CardCount(){
-   int ret = 0;
-    for (int i = 0; i < Card::numberOfCards; i++){
-        ret += cardsLeft[i];
-    }
-    return ret;
+    int i = 0;
+    // Counts only non-null cards
+    for (Card c : cards)
+        if (c != Card::nullCard && c != Card::numberOfCards)
+            i++;
+    return i;
 }

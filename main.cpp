@@ -6,6 +6,7 @@
 #include "ui.h"
 #include "game.h"
 
+#include <vector>
 #include <iostream>
 
 
@@ -13,7 +14,9 @@
 int main(){
 
     std::cout << "Welcome to Coup!" << std::endl;
-    Game thisGame = Game(4); // We can change this number to change the number of players
+
+    std::vector<std::string> names = { "Player", "Avery","Sam","Robin" };
+    Game game = Game(names); // We can change this number to change the number of players
     
 }
 

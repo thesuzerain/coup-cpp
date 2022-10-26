@@ -7,8 +7,9 @@
 
 #include <iostream>
 #include <vector>
-#include "player.h"
 #include "card.h"
+#include "game.h"
+#include "actiontype.h"
 
 enum Color {
     RESET       = 0,
@@ -23,14 +24,30 @@ enum Color {
 
 std::string CardToString(Card card);
 
-void PrintNewFrame(std::string text);
-std::string Colorize(std::string text, Color color);
+void PrintNewFrame(const std::string & text);
 
+// If allowable on this terminal, colorizes the text in 'text' with Color 'color'.
+// Does not work on most Windows machines.
+std::string ColorizeText(const std::string & text, Color color);
+
+// Allows terminal input to determine what action the live (id=0) player wants to take (from all legal actions).
+// Returns corresponding actiontype;
 ActionType GetPlayerActionChoice();
-int GetPlayerTargetChoice(Game * game, bool lastCommandInvalid);
-bool GetPlayerYesNoChoice(std::string text, bool lastCommandInvalid);
-int GetPlayerVariableChoice(std::string text, const std::vector<std::string> & options, bool lastCommandInvalid);
-bool GetPlayerConfirmation(std::string text);
 
+// Allows terminal input to determine what target the live (id=0) player wants to select.
+// Returns index of target.
+int GetPlayerTargetChoice(const Game & game, bool lastCommandInvalid);
+
+// Allows terminal input to handle confirmation.
+// Returns true if yes, false if no.
+bool GetPlayerYesNoChoice(const std::string & text, bool lastCommandInvalid);
+
+// Allows terminal input to choose from a list of possible options ('options').
+// Returns index of chosen selection from the options.
+int GetPlayerVariableChoice(const std::string & text, const std::vector<std::string> & options, bool lastCommandInvalid);
+
+// Allows blocking display text without parsing response.
+// Returns true if success.
+bool GetPlayerConfirmation(const std::string & text);
 
 #endif //COUP_CPP_UI_H

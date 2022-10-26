@@ -1,7 +1,5 @@
 # coup-cpp
-A C++ implementation of the card game Coup with functional AI.
-
-
+A C++ implementation of the card game Coup with a simplified AI.
 
 Coup is a 2-4 player game designed around bluffing and deception. Each player starts with two "influences" (cards) that are hidden from other players. They can perform certain actions depending on those cards, lying if they have to.
 
@@ -19,12 +17,14 @@ To install:
 
 3) Use cmake to compile. 
 
-For those having trouble with cmake or otherwise having compilation troubles, a "coup-cpp" executable has been included with the files that you can run using the command:
-
 ```
 ./coup-cpp
 ```
 
 ---
 
-This game does use colored text using ANSI/VT100 escape sequences: it may have issues running on Win32. I added in some code to only apply the colored text to non Win32, but this issue may still apply. 
+This game does use colored text using ANSI/VT100 escape sequences: theser will display as black on most Windows machines.
+
+---
+
+Update 2022-10-26: Revisited this on a whim to refactor some of it without completely changing the way it is set up (and fix a couple small things).
